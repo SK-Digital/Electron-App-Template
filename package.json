@@ -1,0 +1,20 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "A basic Electron app with Tailwind CSS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:css": "tailwindcss -i src/styles.css -o src/output.css",
+    "watch:css": "tailwindcss -i src/styles.css -o src/output.css --watch",
+    "dev": "concurrently \"npm run watch:css\" \"npm run start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "electron": "^x.x.x",
+    "tailwindcss": "^x.x.x"
+  }
+}
