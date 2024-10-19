@@ -7,7 +7,8 @@
     "start": "electron .",
     "build:css": "tailwindcss -i src/assets/styles/styles.css -o src/assets/styles/output.css",
     "watch:css": "tailwindcss -i src/assets/styles/styles.css -o src/assets/styles/output.css --watch",
-    "dev": "concurrently \"npm run watch:css\" \"npm run start\""
+    "dev": "concurrently \"npm run watch:css\" \"npm run start\"",
+    "make": "electron-forge make"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,14 @@
   "devDependencies": {
     "concurrently": "^9.0.1",
     "electron": "^x.x.x",
-    "tailwindcss": "^x.x.x"
+    "tailwindcss": "^x.x.x",
+    "@electron-forge/cli": "^6.x.x",
+    "@electron-forge/maker-squirrel": "^6.x.x",
+    "@electron-forge/maker-zip": "^6.x.x",
+    "@electron-forge/maker-deb": "^6.x.x",
+    "@electron-forge/maker-rpm": "^6.x.x"
+  },
+  "dependencies": {
+    "electron-forge": "^5.2.4"
   }
 }

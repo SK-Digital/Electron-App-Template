@@ -59,4 +59,19 @@ This will start the Electron app with hot-reloading for both the main and render
 
 ## Building for Production
 
-To build the app for production and create an installer, we'll use `electron-builder`. First, add it to your project:
+To build the app for production and create an installer, we'll use Electron Forge. Electron Forge is already included in this template, so you don't need to install it separately. Follow these steps to create a distributable version of your app:
+
+1. Make sure all your changes are saved and committed.
+
+2. Run the following command to create a production build:
+   ```
+   npm run make
+   ```
+
+3. Electron Forge will create a `out` directory in your project folder. Inside, you'll find:
+   - A packaged version of your app
+   - An installer for your target platform (e.g., .exe for Windows, .dmg for macOS)
+
+4. You can customize the build process by editing the `forge.config.js` file in the root of your project.
+
+For more information on configuring Electron Forge, refer to the [Electron Forge documentation](https://www.electronforge.io/).
